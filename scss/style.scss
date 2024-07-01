@@ -325,20 +325,22 @@ img {
 //main
 main {
   padding-top: 50px;
-  top: 0;
-  z-index: 0;
   @include breakpoint(pc) {
     padding: 70px 0 0 0;
   }
 }
+
 .p-top {
   width: 100%;
   height: auto;
   position: relative;
   padding: 13.7rem 0 0 0;
+  z-index: 10;
   @include breakpoint(tablet) {
-    height: auto;
+    height: 100%;
     padding: 80px 30px;
+    background: url(/images/bg-hero3.png) top center/cover no-repeat;
+    background-attachment: fixed;
   }
   &::before {
     content: "";
@@ -351,14 +353,14 @@ main {
       url(/images/bg-hero2.png) top -30px center/800px no-repeat,
       url(/images/bg-hero3.png) top -30px center/2000px no-repeat;
     width: 100%;
+    background-attachment: fixed;
     height: 130px;
     z-index: -1;
     @include breakpoint(tablet) {
       height: 660px;
       background:
         url(/images/bg-hero1.png) top -75px center/2000px no-repeat,
-        url(/images/bg-hero2.png) top -75px center/2000px no-repeat,
-        url(/images/bg-hero3.png) top -75px center/2000px no-repeat;
+        url(/images/bg-hero2.png) top -75px center/2000px no-repeat;
     }
   }
   &::after {

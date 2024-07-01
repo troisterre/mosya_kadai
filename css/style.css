@@ -320,8 +320,6 @@ img {
 
 main {
   padding-top: 50px;
-  top: 0;
-  z-index: 0;
 }
 @media (min-width: 1201px) {
   main {
@@ -334,11 +332,14 @@ main {
   height: auto;
   position: relative;
   padding: 13.7rem 0 0 0;
+  z-index: 10;
 }
 @media (min-width: 767px) {
   .p-top {
-    height: auto;
+    height: 100%;
     padding: 80px 30px;
+    background: url(/images/bg-hero3.png) top center/cover no-repeat;
+    background-attachment: fixed;
   }
 }
 .p-top::before {
@@ -349,13 +350,14 @@ main {
   left: 0;
   background: url(/images/bg-hero1.png) top -30px center/800px no-repeat, url(/images/bg-hero2.png) top -30px center/800px no-repeat, url(/images/bg-hero3.png) top -30px center/2000px no-repeat;
   width: 100%;
+  background-attachment: fixed;
   height: 130px;
   z-index: -1;
 }
 @media (min-width: 767px) {
   .p-top::before {
     height: 660px;
-    background: url(/images/bg-hero1.png) top -75px center/2000px no-repeat, url(/images/bg-hero2.png) top -75px center/2000px no-repeat, url(/images/bg-hero3.png) top -75px center/2000px no-repeat;
+    background: url(/images/bg-hero1.png) top -75px center/2000px no-repeat, url(/images/bg-hero2.png) top -75px center/2000px no-repeat;
   }
 }
 .p-top::after {
