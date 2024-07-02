@@ -430,12 +430,14 @@ main {
     line-height: calc(22 / 13);
     font-weight: 700;
     @include breakpoint(tablet) {
-      margin-bottom: 37px;
+      margin-bottom: 36px;
+      font-size: 1.6rem;
     }
   }
 }
 .p-card {
   padding: 80px 17px;
+  width: 100%;
   @include breakpoint(tablet) {
     padding: 0;
   }
@@ -445,7 +447,7 @@ main {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      gap: 99px;
+      gap: 9.9rem;
     }
   }
   &__list {
