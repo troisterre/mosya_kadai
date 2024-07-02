@@ -169,36 +169,56 @@ img {
     background-color: #fff;
     width: 100%;
     padding-top: 50px;
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 150;
   }
   &__menu.active {
     transform: translateX(0);
     display: block;
-    transition: 1s ease;
+    transition: 0.3s ease;
+  }
+  &__list:nth-child(3) .p-hamburger__title::before,
+  &__list:nth-child(3) .p-hamburger__title::after {
+    display: none;
   }
   &__title {
     position: relative;
     font-size: 2rem;
     line-height: calc(34 / 20);
     font-weight: 700;
-    padding: 8px;
+    padding: 10px;
+  }
+  &__title::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 3.5%;
+    height: 2px;
+    width: 24px;
+    background: $color--black;
+    transform: rotate(90deg);
+    transition: 0.3s ease;
   }
   &__title::after {
-    content: "＋";
+    content: "";
     position: absolute;
-    font-size: 3rem;
-    font-weight: 400;
-    top: 0;
-    right: 3%;
+    top: 50%;
+    right: 3.5%;
+    height: 2px;
+    width: 24px;
+    background-color: $color--black;
+    transition: all 0.3s ease-in-out;
+  }
+  &__title.open::before {
+    transform: rotate(180deg);
   }
   &__title.open::after {
-    content: "ー";
+    opacity: 0;
   }
   &__title:hover {
-    background-color: $color--skyblue;
-    transition: 1s ease;
+    background: linear-gradient(90deg, #f3fafb, #f3fafb 87%, #f7f7f7 13%);
+    transition: 0.3s ease;
   }
   &__body {
     display: none;
@@ -210,8 +230,8 @@ img {
     padding: 8px 8px;
   }
   &__body-list:hover {
-    background-color: $color--skyblue;
-    transition: 0.5s ease;
+    background-color: #f3fafb;
+    transition: 0.3s ease;
   }
 }
 .hamburger.active {
@@ -306,6 +326,9 @@ img {
   &__list:hover {
     background-color: #fff;
   }
+  &__list:hover a {
+    color: $color--lightblue;
+  }
 }
 .u-dropdown__width308 {
   width: 308px;
@@ -335,7 +358,9 @@ main {
   height: auto;
   position: relative;
   padding: 13.7rem 0 0 0;
-  z-index: 10;
+  background: url(/images/bg-hero3.png) top -26px center/cover no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
   @include breakpoint(tablet) {
     height: 100%;
     padding: 80px 30px;
@@ -350,11 +375,9 @@ main {
     left: 0;
     background:
       url(/images/bg-hero1.png) top -30px center/800px no-repeat,
-      url(/images/bg-hero2.png) top -30px center/800px no-repeat,
-      url(/images/bg-hero3.png) top -30px center/2000px no-repeat;
+      url(/images/bg-hero2.png) top -25px center/800px no-repeat;
     width: 100%;
-    background-attachment: fixed;
-    height: 130px;
+    height: 136px;
     z-index: -1;
     @include breakpoint(tablet) {
       height: 660px;
@@ -370,14 +393,14 @@ main {
     left: 0;
     width: 100%;
     background-color: $color--black;
-    height: 82%;
+    height: 83%;
     z-index: -1;
     @include breakpoint(tablet) {
-      height: 325px;
+      height: 333px;
     }
   }
   &__contents {
-    padding: 1.6rem 1.9rem 2.1rem;
+    padding: 1.7rem 1.7rem 2.1rem;
     background-color: #fff;
     text-align: center;
     @include breakpoint(tablet) {
@@ -386,8 +409,8 @@ main {
       display: block;
       margin: 0 auto;
       border-radius: 10px;
-      margin-bottom: 1.7rem;
-      padding: 43px 40px 19px;
+      margin-bottom: 20px;
+      padding: 43px 34px 19px;
     }
   }
   &__image {
@@ -402,14 +425,15 @@ main {
   &__description {
     margin-bottom: 1.6rem;
     font-size: 1.6rem;
-    line-height: calc(27.5 / 16);
+    line-height: calc(27 / 16);
     font-weight: 700;
-    letter-spacing: -0.001em;
-    margin-bottom: 36px;
+    @include breakpoint(tablet) {
+      margin-bottom: 37px;
+    }
   }
 }
 .p-card {
-  padding: 78px 15px;
+  padding: 80px 17px;
   @include breakpoint(tablet) {
     padding: 0;
   }
@@ -419,7 +443,7 @@ main {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      gap: 100px;
+      gap: 99px;
     }
   }
   &__list {
@@ -427,7 +451,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 5rem;
+    margin-bottom: 50px;
     @include breakpoint(tablet) {
       margin-bottom: 0;
       width: 230px;
@@ -445,9 +469,7 @@ main {
     border-radius: 50%;
     border: 6px solid $color--black;
     background-color: $color--white;
-    @include breakpoint(tablet) {
-      margin-bottom: 10px;
-    }
+    margin-bottom: 6px;
   }
   &__icon {
     color: $color--black;
@@ -466,10 +488,11 @@ main {
   &__inner-text {
     font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.002em;
     line-height: 1.7;
     @include breakpoint(tablet) {
       font-size: 1.6rem;
+      width: 228px;
     }
   }
 }

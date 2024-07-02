@@ -1,7 +1,7 @@
 $(".hamburger").on("click", function () {
   $(".hamburger").toggleClass("active");
-  $(".p-hamburger__menu").toggleClass("active");
-  $(".p-hamburger__menu").slideToggle("slow");
+  $(".p-hamburger__menu").toggleClass("open");
+  $(".p-hamburger__menu").slideToggle(500);
 });
 
 $(".accordion-title").on("click", function () {
