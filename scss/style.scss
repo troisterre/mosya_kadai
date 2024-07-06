@@ -17,7 +17,7 @@ $color--green: #9bc43d;
     }
   }
   @if $point==pc {
-    @media (min-width: 1200px) {
+    @media (min-width: 1201px) {
       @content;
     }
   }
