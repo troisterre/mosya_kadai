@@ -67,6 +67,12 @@ img {
   display: flex;
   justify-content: space-between;
 }
+.no-tablet {
+  display: block;
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
 //header
 .l-header {
   height: 50px;
@@ -99,8 +105,8 @@ img {
   &__image {
     width: 143px;
     height: 30px;
-    @include breakpoint(tablet) {
-      width: 157px;
+    @include breakpoint(pc) {
+      width: 157.27px;
       height: 33px;
     }
   }
@@ -121,6 +127,7 @@ img {
   }
   &__description span {
     font-size: 1.8rem;
+    margin: -1px 0;
   }
   &__nav {
     display: none;
@@ -300,6 +307,7 @@ img {
     height: 72px;
     font-size: 1.8rem;
     line-height: 1;
+    margin: 36px auto 10px;
   }
 }
 .p-dropdown {
@@ -368,6 +376,14 @@ main {
     flex-direction: column;
     position: relative;
     justify-content: flex-end;
+    @include breakpoint(tablet) {
+      padding: 80px 0 0 0;
+      height: 650px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      background-position: 54% 50%;
+    }
   }
   &__wrapper::before {
     content: "";
@@ -375,10 +391,23 @@ main {
     display: block;
     top: 0;
     left: 0;
-    background: url(/images/bg-hero2.png) top -25px center/800px no-repeat;
+    background-image: url(/images/bg-hero2.png);
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-origin: padding-box;
+    background-position-x: 50%;
+    background-position-y: -25px;
+    background-attachment: scroll;
+    background-clip: border-box;
     width: 100%;
     z-index: 10;
     height: 200px;
+    @include breakpoint(tablet) {
+      height: 650px;
+      background-size: auto;
+      background-position-x: 50%;
+      background-position-y: 50%;
+    }
   }
   &__wrapper::after {
     content: "";
@@ -386,10 +415,22 @@ main {
     top: 0;
     left: 0;
     display: block;
-    background: url(/images/bg-hero1.png) top -30px center/800px no-repeat;
+    background-image: url(/images/bg-hero1.png);
+    background-size: 800px;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position: 50% -30px;
+    background-attachment: scroll;
+    background-clip: border-box;
     width: 100%;
     z-index: 15;
     height: 200px;
+    @include breakpoint(tablet) {
+      height: 650px;
+      background-size: auto;
+      background-position-x: 50%;
+      background-position-y: 50%;
+    }
   }
   &__contents {
     position: absolute;
@@ -399,13 +440,12 @@ main {
     width: 100%;
     z-index: 50;
     @include breakpoint(tablet) {
-      max-width: 530px;
+      width: 496px;
       box-sizing: border-box;
       height: 367px;
       display: block;
-      margin: 0 auto;
       border-radius: 10px;
-      padding: 43px 40px 19px 40px;
+      padding: 43px 40px 19px;
     }
   }
   &__image {
@@ -413,14 +453,13 @@ main {
     @include breakpoint(tablet) {
       display: block;
       width: 280px;
-      height: 59px;
-      margin: 0 auto 26px auto;
+      height: 58.75px;
+      margin: 0 auto;
     }
   }
   &__box {
     width: 100%;
     @include breakpoint(tablet) {
-      width: 345px;
     }
   }
   &__description {
@@ -429,8 +468,9 @@ main {
     line-height: 27.625px;
     font-weight: 700;
     @include breakpoint(tablet) {
-      margin-bottom: 36px;
+      margin: 26px 0 10px;
       font-size: 1.6rem;
+      line-height: 34px;
     }
   }
 }
@@ -439,7 +479,7 @@ main {
   width: 100%;
   background-color: $color--black;
   @include breakpoint(tablet) {
-    padding: 0;
+    height: 330px;
   }
   &__menu {
     flex-direction: column;
@@ -448,7 +488,8 @@ main {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      gap: 9.9rem;
+      width: 1078px;
+      margin: -263px auto 0;
     }
   }
   &__list {
@@ -458,8 +499,8 @@ main {
     justify-content: center;
     margin: 0 7px 50px;
     @include breakpoint(tablet) {
-      margin-bottom: 0;
-      width: 230px;
+      margin: 0 50px;
+      width: 229px;
     }
   }
   &__list:last-child {
