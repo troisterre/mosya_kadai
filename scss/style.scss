@@ -514,6 +514,7 @@ main {
       justify-content: space-evenly;
       align-items: center;
       max-width: 1000px;
+      width: 100%;
       margin: -263px auto 0;
     }
   }
@@ -524,8 +525,8 @@ main {
     justify-content: center;
     margin: 0 7px 50px;
     @include breakpoint(tablet) {
-      margin: 0 5vw;
-      width: 229vw;
+      margin: 0 5rem;
+      width: 229px;
     }
     @include breakpoint(pc) {
       margin: 0 50px;

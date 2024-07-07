@@ -517,6 +517,7 @@ main {
     justify-content: space-evenly;
     align-items: center;
     max-width: 1000px;
+    width: 100%;
     margin: -263px auto 0;
   }
 }
@@ -529,8 +530,8 @@ main {
 }
 @media (min-width: 767px) {
   .p-card__list {
-    margin: 0 5vw;
-    width: 229vw;
+    margin: 0 5rem;
+    width: 229px;
   }
 }
 @media (min-width: 1201px) {
