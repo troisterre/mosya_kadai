@@ -514,8 +514,8 @@ main {
 @media (min-width: 767px) {
   .p-card__menu {
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
     max-width: 1000px;
     width: 100%;
     margin: -263px auto 0;
@@ -530,8 +530,8 @@ main {
 }
 @media (min-width: 767px) {
   .p-card__list {
-    margin: 0 5rem;
-    width: 229px;
+    margin: 0 2%;
+    width: 28.5%;
   }
 }
 @media (min-width: 1201px) {
@@ -578,7 +578,11 @@ main {
 @media (min-width: 767px) {
   .p-card__inner-text {
     font-size: 1.6rem;
-    width: 228px;
+  }
+}
+@media (min-width: 1281px) {
+  .p-card__inner-text {
+    width: 229px;
   }
 }
 /*# sourceMappingURL=style.css.map */

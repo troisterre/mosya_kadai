@@ -511,8 +511,8 @@ main {
     margin: 0 10px;
     @include breakpoint(tablet) {
       flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
+      justify-content: center;
+      align-items: flex-start;
       max-width: 1000px;
       width: 100%;
       margin: -263px auto 0;
@@ -525,8 +525,8 @@ main {
     justify-content: center;
     margin: 0 7px 50px;
     @include breakpoint(tablet) {
-      margin: 0 5rem;
-      width: 229px;
+      margin: 0 2%;
+      width: 28.5%;
     }
     @include breakpoint(pc) {
       margin: 0 50px;
@@ -567,7 +567,9 @@ main {
     margin-top: 10px;
     @include breakpoint(tablet) {
       font-size: 1.6rem;
-      width: 228px;
+    }
+    @include breakpoint(pc2) {
+      width: 229px;
     }
   }
 }
