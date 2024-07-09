@@ -398,7 +398,6 @@ main {
     flex-direction: column;
     position: relative;
     justify-content: flex-end;
-<<<<<<< HEAD
     @include breakpoint(tablet) {
       padding: 80px 0 0 0;
       height: 650px;
@@ -410,8 +409,6 @@ main {
       background-size: cover;
       background-origin: padding-box;
     }
-=======
->>>>>>> refs/remotes/origin/main
   }
   &__wrapper::before {
     content: "";
@@ -419,7 +416,6 @@ main {
     display: block;
     top: 0;
     left: 0;
-<<<<<<< HEAD
     background-image: url(/images/bg-hero2.png);
     background-repeat: no-repeat;
     background-size: 800px;
@@ -437,12 +433,6 @@ main {
       background-position-x: 50%;
       background-position-y: 50%;
     }
-=======
-    background: url(/images/bg-hero2.png) top -25px center/800px no-repeat;
-    width: 100%;
-    z-index: 10;
-    height: 200px;
->>>>>>> refs/remotes/origin/main
   }
   &__wrapper::after {
     content: "";
@@ -450,7 +440,6 @@ main {
     top: 0;
     left: 0;
     display: block;
-<<<<<<< HEAD
     background-image: url(/images/bg-hero1.png);
     background-size: 800px;
     background-repeat: no-repeat;
@@ -467,12 +456,6 @@ main {
       background-position-x: 50%;
       background-position-y: 50%;
     }
-=======
-    background: url(/images/bg-hero1.png) top -30px center/800px no-repeat;
-    width: 100%;
-    z-index: 15;
-    height: 200px;
->>>>>>> refs/remotes/origin/main
   }
   &__contents {
     position: absolute;
