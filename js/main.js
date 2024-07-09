@@ -4,9 +4,9 @@ $(".hamburger").on("click", function () {
   $(".p-hamburger__menu").slideToggle(500);
 });
 
-$(".accordion-title").on("click", function () {
-  $(this).toggleClass("open");
-  $(this).next().slideToggle();
+$(".accordion").hover(function () {
+  $(this).children(".accordion-title").toggleClass("open");
+  $(this).children(".accordion-body").stop().slideToggle();
 });
 
 $(".l-header__list").hover(function () {

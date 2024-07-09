@@ -189,6 +189,7 @@ img {
   color: $color--lightblue;
   @include breakpoint(pc) {
     display: none;
+    height: 70px;
   }
   &__menu {
     display: none;
@@ -199,6 +200,7 @@ img {
     top: 0;
     z-index: 150;
   }
+
   &__menu.active {
     transform: translateX(0);
     display: block;
@@ -226,6 +228,9 @@ img {
     transform: rotate(90deg);
     transition: 0.3s ease;
     margin: -1px 0 0 0;
+    @include breakpoint(tablet) {
+      right: 1%;
+    }
   }
   &__title::after {
     content: "";
@@ -237,6 +242,9 @@ img {
     background-color: $color--black;
     transition: all 0.3s ease-in-out;
     margin: -1px 0 0 0;
+    @include breakpoint(tablet) {
+      right: 1%;
+    }
   }
   &__title.open::before {
     transform: rotate(180deg);
@@ -247,6 +255,9 @@ img {
   &__title:hover {
     background: linear-gradient(90deg, #f3fafb, #f3fafb 87%, #f7f7f7 13%);
     transition: 0.3s ease;
+    @include breakpoint(tablet) {
+      background: #f3fafb;
+    }
   }
   &__body {
     display: none;
