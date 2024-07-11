@@ -201,49 +201,50 @@ img {
   content: "";
   position: absolute;
   top: 50%;
-  right: 3.5%;
+  right: 13px;
   height: 2px;
   width: 24px;
   background: #131d34;
   transform: rotate(90deg);
-  transition: 0.3s ease;
+  transition: 0.1s ease;
   margin: -1px 0 0 0;
 }
 @media (min-width: 767px) {
   .p-hamburger__title::before {
-    right: 1%;
+    right: 12px;
   }
 }
 .p-hamburger__title::after {
   content: "";
   position: absolute;
   top: 50%;
-  right: 3.5%;
+  right: 13px;
   height: 2px;
   width: 24px;
+  z-index: 10;
   background-color: #131d34;
-  transition: all 0.3s ease-in-out;
   margin: -1px 0 0 0;
 }
 @media (min-width: 767px) {
   .p-hamburger__title::after {
-    right: 1%;
+    right: 12px;
   }
-}
-.p-hamburger__title.open::before {
-  transform: rotate(180deg);
 }
 .p-hamburger__title.open::after {
+  z-index: 10;
+}
+.p-hamburger__title.open::before {
   opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 55px;
+  right: 0;
+  background-color: #f7f7f7;
+  z-index: 1;
 }
 .p-hamburger__title:hover {
-  background: linear-gradient(90deg, #f3fafb, #f3fafb 87%, #f7f7f7 13%);
-  transition: 0.3s ease;
-}
-@media (min-width: 767px) {
-  .p-hamburger__title:hover {
-    background: #f3fafb;
-  }
+  background: #f3fafb;
 }
 .p-hamburger__body {
   display: none;
