@@ -234,14 +234,13 @@ img {
   z-index: 10;
 }
 .p-hamburger__title.open::before {
-  opacity: 0;
   position: absolute;
   top: 0;
   width: 50px;
   height: 55px;
   right: 0;
   background-color: #f7f7f7;
-  z-index: 1;
+  z-index: 9;
 }
 .p-hamburger__title:hover {
   background: #f3fafb;
