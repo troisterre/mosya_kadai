@@ -146,8 +146,13 @@ img {
   align-items: center;
   transition: all 0.3s ease;
   position: relative;
-  padding: 0 15px;
+  padding: 0 10px;
   text-wrap: nowrap;
+}
+@media (min-width: 1281px) {
+  .l-header__list {
+    padding: 0 15px;
+  }
 }
 .l-header__list-title {
   font-weight: 700;
@@ -318,6 +323,13 @@ img {
   justify-content: center;
   align-items: center;
   text-wrap: nowrap;
+  transition: 0.3s;
+  padding: 0 10px;
+}
+@media (min-width: 1201px) {
+  .c-button__contact {
+    padding: 0 15px;
+  }
 }
 
 .c-button__link {
@@ -333,11 +345,11 @@ img {
   line-height: 1.7;
   width: 275.73px;
   height: 46px;
-  transition: 0.5s ease;
+  transition: 0.5s all;
 }
 @media (min-width: 767px) {
   .c-button__link {
-    margin: 2.9rem auto 1rem;
+    margin: 1.6em auto 0.5em;
     width: 343.45px;
     height: 72.5px;
     padding: 24px 37px;
@@ -357,6 +369,7 @@ img {
   position: relative;
   height: 64px;
   padding: 15px 60px 15px 15px;
+  transition: 0.3s;
 }
 .p-dropdown__list-title {
   font-size: 2rem;
@@ -367,7 +380,7 @@ img {
   background-color: #fff;
 }
 .p-dropdown__list:hover a {
-  color: #2bb8d9;
+  color: #2498b3;
 }
 
 .u-listWidth__308 {
@@ -483,7 +496,7 @@ main {
 }
 @media (min-width: 767px) {
   .p-top__contents {
-    width: 496px;
+    width: 495.94px;
     box-sizing: border-box;
     height: 367px;
     display: block;
@@ -513,7 +526,7 @@ main {
 }
 @media (min-width: 767px) {
   .p-top__description {
-    margin: 26px 0 10px;
+    margin: 1.3em 0 0.5em;
     font-size: 1.6rem;
     line-height: 34px;
   }
@@ -522,11 +535,16 @@ main {
 .p-card {
   padding: 80px 0;
   width: 100%;
-  background-color: #131d34;
+  background-color: #000000;
 }
 @media (min-width: 767px) {
   .p-card {
     height: 330px;
+  }
+}
+@media (min-width: 767px) {
+  .p-card__box {
+    margin: 0 10px;
   }
 }
 .p-card__menu {
@@ -539,7 +557,6 @@ main {
     justify-content: center;
     align-items: flex-start;
     max-width: 1000px;
-    width: 100%;
     margin: -263px auto 0;
   }
 }
@@ -552,11 +569,11 @@ main {
 }
 @media (min-width: 767px) {
   .p-card__list {
+    width: 29.33%;
     margin: 0 2%;
-    width: 28.5%;
   }
 }
-@media (min-width: 1201px) {
+@media (min-width: 1078px) {
   .p-card__list {
     margin: 0 50px;
     width: 229px;
@@ -569,6 +586,7 @@ main {
   width: 230px;
   height: 230px;
   display: flex;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
@@ -602,7 +620,7 @@ main {
     font-size: 1.6rem;
   }
 }
-@media (min-width: 1281px) {
+@media (min-width: 1201px) {
   .p-card__inner-text {
     width: 229px;
   }

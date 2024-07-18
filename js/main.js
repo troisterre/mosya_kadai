@@ -1,7 +1,7 @@
-//PCでホバーした時の処理
+//PCでホバーした時の処理　戻る時の動きは無し
 $(".l-header__list").hover(function () {
   if ($(this).children(".p-dropdown__menu").css("display") == "none") {
-    $(this).children(".p-dropdown__menu").slideDown(200);
+    $(this).children(".p-dropdown__menu").slideDown("fast");
   } else {
     $(this).children(".p-dropdown__menu").hide();
   }
@@ -17,8 +17,12 @@ $(window).resize(function () {
   $(".p-hamburger__menu").removeClass("open");
   $(".p-hamburger__menu").slideUp();
 });
-
+//spでアコーディオンメニューが開いた時の処理　戻る時の動きなし
 $(".accordion").hover(function () {
   $(this).children(".accordion-title").toggleClass("open");
-  $(this).children(".accordion-body").stop().slideToggle();
+  if ($(this).children(".accordion-body").css("display") == "none") {
+    $(this).children(".accordion-body").stop().slideToggle("fast");
+  } else {
+    $(this).children(".accordion-body").hide();
+  }
 });

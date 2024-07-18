@@ -16,6 +16,11 @@ $color--green: #9bc43d;
       @content;
     }
   }
+  @if $point==tablet2 {
+    @media (min-width: 1078px) {
+      @content;
+    }
+  }
   @if $point==pc {
     @media (min-width: 1201px) {
       @content;
@@ -166,8 +171,11 @@ img {
     align-items: center;
     transition: all 0.3s ease;
     position: relative;
-    padding: 0 15px;
+    padding: 0 10px;
     text-wrap: nowrap;
+    @include breakpoint(pc2) {
+      padding: 0 15px;
+    }
   }
   &__list-title {
     font-weight: 700;
@@ -327,6 +335,11 @@ img {
   justify-content: center;
   align-items: center;
   text-wrap: nowrap;
+  transition: 0.3s;
+  padding: 0 10px;
+  @include breakpoint(pc) {
+    padding: 0 15px;
+  }
 }
 .c-button__link {
   background-color: $color--blue;
@@ -341,9 +354,9 @@ img {
   line-height: calc(34 / 20);
   width: 275.73px;
   height: 46px;
-  transition: 0.5s ease;
+  transition: 0.5s all;
   @include breakpoint(tablet) {
-    margin: 2.9rem auto 1rem;
+    margin: 1.6em auto 0.5em;
     width: 343.45px;
     height: 72.5px;
     padding: 24px 37px;
@@ -364,6 +377,7 @@ img {
     position: relative;
     height: 64px;
     padding: 15px 60px 15px 15px;
+    transition: 0.3s;
   }
   &__list-title {
     font-size: 2rem;
@@ -374,7 +388,7 @@ img {
     background-color: #fff;
   }
   &__list:hover a {
-    color: $color--lightblue;
+    color: $color--blue;
   }
 }
 .u-listWidth {
@@ -483,7 +497,7 @@ main {
     width: 100%;
     z-index: 50;
     @include breakpoint(tablet) {
-      width: 496px;
+      width: 495.94px;
       box-sizing: border-box;
       height: 367px;
       display: block;
@@ -511,7 +525,7 @@ main {
     line-height: 27.625px;
     font-weight: 700;
     @include breakpoint(tablet) {
-      margin: 26px 0 10px;
+      margin: 1.3em 0 0.5em;
       font-size: 1.6rem;
       line-height: 34px;
     }
@@ -520,9 +534,14 @@ main {
 .p-card {
   padding: 80px 0;
   width: 100%;
-  background-color: $color--black;
+  background-color: #000000;
   @include breakpoint(tablet) {
     height: 330px;
+  }
+  &__box {
+    @include breakpoint(tablet) {
+      margin: 0 10px;
+    }
   }
   &__menu {
     flex-direction: column;
@@ -532,7 +551,6 @@ main {
       justify-content: center;
       align-items: flex-start;
       max-width: 1000px;
-      width: 100%;
       margin: -263px auto 0;
     }
   }
@@ -543,10 +561,10 @@ main {
     justify-content: center;
     margin: 0 7px 50px;
     @include breakpoint(tablet) {
+      width: 29.33%;
       margin: 0 2%;
-      width: 28.5%;
     }
-    @include breakpoint(pc) {
+    @include breakpoint(tablet2) {
       margin: 0 50px;
       width: 229px;
     }
@@ -558,6 +576,7 @@ main {
     width: 230px;
     height: 230px;
     display: flex;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
@@ -586,7 +605,7 @@ main {
     @include breakpoint(tablet) {
       font-size: 1.6rem;
     }
-    @include breakpoint(pc2) {
+    @include breakpoint(pc) {
       width: 229px;
     }
   }
