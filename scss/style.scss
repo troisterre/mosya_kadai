@@ -58,6 +58,7 @@ body {
   font-size: 1.6rem;
   color: $color--black;
 }
+
 a {
   text-decoration: none;
   color: $color--black;
@@ -195,6 +196,7 @@ img {
   width: 50px;
   height: 50px;
   color: $color--lightblue;
+  transition: 0.5s ease;
   @include breakpoint(pc) {
     display: none;
     height: 70px;
@@ -225,7 +227,7 @@ img {
   &__title {
     position: relative;
     font-size: 20px;
-    line-height: calc(34 / 20);
+    line-height: 34px;
     font-weight: 700;
     padding: 10px;
   }
@@ -279,10 +281,10 @@ img {
     font-weight: 400;
     line-height: calc(34 / 20);
     padding: 10px 10px 10px 25px;
+    transition: 0.3s ease;
   }
   &__body-list:hover {
     background-color: #f3fafb;
-    transition: 0.3s ease;
   }
 }
 
@@ -304,7 +306,7 @@ img {
   height: 2px;
   position: absolute;
   background-color: $color--blue;
-  transition: 0.3s ease;
+  transition: 0.2s ease;
   top: 9px;
 }
 .hamburger span::after {
