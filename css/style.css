@@ -206,6 +206,7 @@ img {
   line-height: 34px;
   font-weight: 700;
   padding: 10px;
+  transition: 0.3s ease;
 }
 .p-hamburger__title::before {
   content: "";
@@ -256,7 +257,6 @@ img {
 }
 .p-hamburger__body {
   display: none;
-  transition: 0.5s ease;
 }
 .p-hamburger__body-list {
   font-weight: 400;

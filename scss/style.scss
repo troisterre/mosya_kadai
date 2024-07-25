@@ -228,6 +228,7 @@ img {
     line-height: 34px;
     font-weight: 700;
     padding: 10px;
+    transition: 0.3s ease;
   }
   &__title::before {
     content: "";
@@ -274,7 +275,6 @@ img {
   }
   &__body {
     display: none;
-    transition: 0.5s ease;
   }
 
   &__body-list {
