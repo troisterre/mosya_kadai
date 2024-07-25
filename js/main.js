@@ -6,12 +6,13 @@ $(".l-header__list").hover(function () {
     $(this).children(".p-dropdown__menu").hide();
   }
 });
-
+//tablet&sp メニュー開いた時の処理
 $(".hamburger").on("click", function () {
   $(".hamburger").toggleClass("active");
   $(".p-hamburger__menu").toggleClass("open");
   $(".p-hamburger__menu").slideToggle("fast");
 });
+
 $(window).resize(function () {
   $(".hamburger").removeClass("active");
   $(".p-hamburger__menu").removeClass("open");
@@ -19,10 +20,13 @@ $(window).resize(function () {
 });
 //spでアコーディオンメニューが開いた時の処理　戻る時の動きなし
 $(".accordion").hover(function () {
-  $(this).children(".accordion-title").toggleClass("open");
-  if ($(this).children(".accordion-body").css("display") == "none") {
-    $(this).children(".accordion-body").stop().slideToggle("fast");
+  //accordion-titleがhoverした時
+  if ($(this).children(".p-hamburger__body").css("display") == "none") {
+    $(this).children(".accordion-title").addClass("open"); //accordion-titleのプラスマイナスの処理
+    $(this).children(".p-hamburger__body").addClass("open"); //accordion-menuにopenクラスを加える
+    $(this).children(".p-hamburger__body").css("display", "block");
   } else {
-    $(this).children(".accordion-body").hide();
+    $(this).children(".accordion-title").removeClass("open"); //accordion-titleのプラスマイナス処理
+    $(this).children(".p-hamburger__body").hide(); //hoverが外れた時の隠す処理
   }
 });

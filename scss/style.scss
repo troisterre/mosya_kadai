@@ -210,11 +210,9 @@ img {
     top: 0;
     z-index: 150;
   }
-
   &__menu.active {
     transform: translateX(-90deg);
     display: block;
-    transition: 0.3s ease;
     @include breakpoint(pc) {
       transform: none;
     }
@@ -276,7 +274,9 @@ img {
   }
   &__body {
     display: none;
+    transition: 0.5s ease;
   }
+
   &__body-list {
     font-weight: 400;
     line-height: calc(34 / 20);
@@ -325,6 +325,8 @@ img {
 .hamburger.active span::after {
   transform: rotate(-45deg);
 }
+//アコーディオン
+
 .c-button__contact {
   font-size: 1.6rem;
   letter-spacing: -0.1;
